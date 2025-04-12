@@ -1,0 +1,81 @@
+===================================== Playwright =====================================
+1. Instal node js
+2. open vs code
+3. open terminal
+4. type = git init
+5. type = npm install --save-dev @playwright/test
+
+Run in playwright
+npx playwright test - run all playwright in specific folder
+
+npx playwright test tests/example.spec.js - run specific test in folder
+
+npx playwright test tests/example.spec.js --headed - run specific test in folder and open browser
+
+npx playwright test tests/example.spec.js --headed --browser=firefox  - run specific test in folder and open in specific browser
+
+npx playwright test tests/example.spec.js --headed --browser=all - run a test at the same time
+
+@Smoke, @regression
+npx playwright test --grep smoke -it can run successfully only smoke test
+npx playwright test @smoke  -it can run all test cases
+npx playwright test --grep "@smoke" -it can run successfully only smoke test
+npx playwright test --grep-invert smoke -will run all cases and that there is only the word regression 
+npx playwright test --grep-invert "@smoke" -will run all cases and there is a word combination of regression and smoke (@regression-smoke)
+
+npx playwright test --grep regression -it can run successfully only regression test
+npx playwright test @regression  -it can run all test cases
+npx playwright test --grep "@regression" -it can run successfully only regression test
+npx playwright test --grep-invert regression -will run all cases and that there is only the word smoke 
+npx playwright test --grep-invert "@regression" -will run all cases and there is a word combination of smoke and regression (@smoke-regression)
+
+
+Config Video record
+'off' - Do not record video.
+'on' - Record video for each test.
+'retain-on-failure' - Record video for each test, but remove all videos from successful test runs.
+'on-first-retry' - Record video only when retrying a test for the first time.
+
+
+Run Config:
+npx playwright test tests/example.spec.js --config=playwright.config.js --project=chromium -it run specific test
+
+Report:
+npx playwright test tests/beforeAfterHooks --reporter=list
+npx playwright test tests/beforeAfterHooks --reporter=line
+npx playwright test tests/beforeAfterHooks --reporter=dot
+npx playwright test tests/beforeAfterHooks --reporter=html
+--show that result reportHTML:
+npx playwright show-report
+
+-- DEBUG MODE
+npx playwright test tests/assertionsPracticing.spec.js --project=chromium --debug
+
+-- Open Generator
+npx playwright codegen demoqa.com
+
+--Create Json file
+npx playwright codegen --save-storage=auth.json parabank.parasoft.com (-Save to VScode)
+npx playwright codegen --load-storage=auth.json parabank.parasoft.com (-Use save auth.json to skip login)
+
+--Running test on emulating device
+ npx playwright codegen --device="iPhone 15 Pro" wikipedia.org
+
+ --Docs Codegen(Test Generator)
+ https://playwright.dev/docs/codegen
+
+ --CMD TImeout
+ npx playwright test tests/localConfiguration.spec.js --timeout=5000
+
+- Cmd Run run in list 
+ npx playwright test tests/localConfiguration.spec.js --list
+
+- Run in list specific browser
+ npx playwright test tests/localConfiguration.spec.js --list --project=chromium
+
+- Run in max failure = 20
+ npx playwright test tests/localConfiguration.spec.js --max-failures=20
+
+- Run in workers = 1
+ npx playwright test tests/localConfiguration.spec.js --workers=1
+ https://playwright.dev/docs/test-parallel

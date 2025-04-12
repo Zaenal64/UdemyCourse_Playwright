@@ -1,0 +1,17 @@
+{
+  "name": "udemy-course",
+  "version": "1.0.0",
+  "description": "Playwright Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "first_command",
+    "test:chrome": "npx playwright test tests/parallelTest.spec.js --config=playwright.config.js --project=chromium",
+    "test:firefox": "npx playwright test tests/beforeAfterHooks.spec.js --config=playwright.config.js --project=firefox",
+    "test:webkit": "npx playwright test tests/beforeAfterHooks.spec.js --config=playwright.config.js --project=webkit"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1"
+  }
+}

@@ -1,0 +1,19 @@
+<h1 class="text-center" xpath="1">Text Box</h1>
+= //h1[text()='Text Bix'] (In XPath)
+
+<img src="/images/Toolsqa.jpg" xpath="1">
+= //img[@src='/images/Toolssqa.jpg'] (In XPath)
+
+<input autocomplete="off" placeholder="Full Name" type="text" id="userName" class=" mr-sm-2 form-control" style="" xpath="1">
+= //input[@placeholder='Full Name'] (In XPath)
+
+<span class="rct-title" xpath="1" style="">Home</span>
+= //span[contains(@class,'rct-title')] (In XPath)
+OR
+= //span[contains(text(), 'Home')] (In XPath)
+OR
+//span[@class='rct-title' or contains(text(), 'Home')] (In XPath)
+
+
+<span class="rct-checkbox" style="" xpath="1"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="rct-icon rct-icon-uncheck" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg></span>
+= //span[@class='rct-checkbox'] (In XPath)

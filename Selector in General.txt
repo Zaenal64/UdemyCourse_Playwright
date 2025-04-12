@@ -1,0 +1,17 @@
+CSS Selectors - Case Sensitive
+Text
+ID
+Name
+Xpath
+
+Most of the Playwright Selectors
+1. Text
+= await page.locator('text= Log in').click();
+2. CSS
+= await page,locator('button').click();
+3. Selecting Visible Elements
+= await page.locator('button:visible').click();
+4. Element Containing Element
+= await page.locator('article:has(div.promo)').textContent();
+5. Matching Conditions
+= await page.locator('button:has-text("Log in"), button:has-text("Sign in")').click();
