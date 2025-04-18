@@ -79,3 +79,7 @@ npx playwright codegen --load-storage=auth.json parabank.parasoft.com (-Use save
 - Run in workers = 1
  npx playwright test tests/localConfiguration.spec.js --workers=1
  https://playwright.dev/docs/test-parallel
+
+     //RUN These to Convert page to pdf
+    // npx playwright pdf https://parabank.parasoft.com/parabank/services.htm result.pdf
+    // npx playwright pdf --viewport-size="1280,720" https://parabank.parasoft.com/parabank/services.htm result.pdf
