@@ -88,3 +88,12 @@ npx playwright codegen --load-storage=auth.json parabank.parasoft.com (-Use save
 npx playwright wk https://parabank.parasoft.com -Open with webkit
 npx playwright cr https://parabank.parasoft.com -Open with google chrome
 
+
+- Screenshots though with CLI
+npx playwright screenshot -b webkit https://wikipedia.com wikipedia.png
+
+- OPen with full page
+npx playwright screenshot --full-page -b webkit https://wikipedia.com wikipedia.png
+
+- Open with specific device
+npx playwright screenshot --full-page --device="iPhone 11" -b webkit https://wikipedia.com wikipedia.png
