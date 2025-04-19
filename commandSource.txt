@@ -83,3 +83,8 @@ npx playwright codegen --load-storage=auth.json parabank.parasoft.com (-Use save
      //RUN These to Convert page to pdf
     // npx playwright pdf https://parabank.parasoft.com/parabank/services.htm result.pdf
     // npx playwright pdf --viewport-size="1280,720" https://parabank.parasoft.com/parabank/services.htm result.pdf
+
+- Open browser with playwright
+npx playwright wk https://parabank.parasoft.com -Open with webkit
+npx playwright cr https://parabank.parasoft.com -Open with google chrome
+
